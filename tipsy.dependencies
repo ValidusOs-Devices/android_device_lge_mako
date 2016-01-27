@@ -1,10 +1,20 @@
 [
  {
-   "repository": "android_kernel_google_msm",
-   "target_path": "kernel/google/msm"
+   "remote":       "github",
+   "repository":   "CyanogenMod/android_kernel_google_msm",
+   "target_path":  "kernel/google/msm",
+   "branch":       "cm-13.0"
  },
  {
-   "repository": "android_external_stlport",
-   "target_path": "external/stlport"
+   "remote":       "github",
+   "repository":   "CyanogenMod/android_external_stlport",
+   "target_path":  "external/stlport",
+   "branch":       "cm-13.0"
+ },
+ {
+    "remote":      "github",
+    "repository":  "AICP/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "branch":      "mm6.0"
  }
 ]

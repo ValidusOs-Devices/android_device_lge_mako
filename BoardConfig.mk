@@ -32,6 +32,13 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 TARGET_KERNEL_SOURCE := kernel/google/msm
 TARGET_KERNEL_CONFIG := cyanogen_mako_defconfig
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.9-uber
+
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
 BOARD_USES_FLUENCE_INCALL := true
@@ -132,10 +139,3 @@ MALLOC_IMPL := dlmalloc
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
-
-# Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-
-# Rom Toolchain
-TARGET_GCC_VERSION_EXP := 4.9
